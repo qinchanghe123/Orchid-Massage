@@ -137,7 +137,7 @@
     }
 
     .hero p {
-      max-width: 700px;
+      max-width: 740px;
       margin: 0 auto 34px;
       font-size: clamp(18px, 2.4vw, 25px);
       color: #fff4e3;
@@ -230,6 +230,62 @@
         linear-gradient(180deg, rgba(58, 42, 33, 0.18), rgba(58, 42, 33, 0.36)),
         url("https://i.pinimg.com/1200x/dc/36/fe/dc36feaf9cc11bec29cc3de7834c539e.jpg")
         center / cover;
+    }
+
+    .pain-focus {
+      background: #fff;
+    }
+
+    .focus-wrap {
+      max-width: 1080px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .focus-card {
+      background: linear-gradient(135deg, #fff8ee, #f5eadb);
+      border: 1px solid #ecd8b9;
+      border-radius: var(--radius);
+      padding: clamp(28px, 4vw, 46px);
+      box-shadow: var(--shadow);
+    }
+
+    .focus-card h2 {
+      margin-top: 0;
+    }
+
+    .focus-card p {
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+
+    .focus-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .focus-item {
+      background: #fff;
+      border-radius: 20px;
+      padding: 22px 24px;
+      box-shadow: 0 10px 28px rgba(44, 35, 29, 0.08);
+      border-left: 5px solid var(--gold);
+    }
+
+    .focus-item strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: var(--deep);
+    }
+
+    .focus-item span {
+      color: var(--muted);
+      font-size: 17px;
     }
 
     .pricing {
@@ -327,13 +383,6 @@
 
     .gallery-empty {
       display: none;
-      margin: 0 auto;
-      max-width: 780px;
-      background: #fff;
-      color: var(--muted);
-      border-radius: 16px;
-      padding: 18px;
-      text-align: center;
     }
 
     .reviews {
@@ -521,6 +570,7 @@
       }
 
       .about-card,
+      .focus-wrap,
       .contact-wrap {
         grid-template-columns: 1fr;
       }
@@ -575,7 +625,8 @@
     <a class="brand" href="#home">Orchid Massage</a>
     <div class="nav-links">
       <a href="#about">About</a>
-      <a href="#pricing">Services</a>
+      <a href="#focus">Pain Relief</a>
+      <a href="#pricing">Pricing</a>
       <a href="#reviews">Reviews</a>
       <a href="#faq">FAQs</a>
       <a href="#contact">Contact</a>
@@ -591,7 +642,7 @@
       <div class="eyebrow">Relax • Restore • Renew</div>
       <h1>Orchid Massage</h1>
       <p>
-        A quiet, clean, and private place in Colorado Springs for relaxing massage care.
+        Professional massage care for relaxation, body tension, shoulder discomfort, back soreness, and lower-back pain.
       </p>
       <a class="btn" href="#booking">Book Now</a>
     </div>
@@ -619,6 +670,40 @@
         </p>
       </div>
       <div class="about-visual" aria-label="Relaxing massage room atmosphere"></div>
+    </div>
+  </section>
+
+  <section class="pain-focus" id="focus">
+    <div class="focus-wrap">
+      <div class="focus-card">
+        <div class="section-head" style="text-align:left;margin:0;">
+          <div class="kicker">Professional Pain Relief Focus</div>
+          <h2>Focused care for body pain and tension</h2>
+          <p>
+            Orchid Massage provides professional massage care focused on relaxation and common discomfort areas.
+            Sessions can help ease shoulder pain, back tension, lower-back soreness, and everyday muscle fatigue.
+          </p>
+        </div>
+      </div>
+
+      <div class="focus-list">
+        <div class="focus-item">
+          <strong>Shoulder Pain</strong>
+          <span>Focused massage care for tight shoulders, neck tension, and upper-body stiffness.</span>
+        </div>
+        <div class="focus-item">
+          <strong>Back Pain</strong>
+          <span>Relaxing bodywork designed to help reduce back tension and improve comfort.</span>
+        </div>
+        <div class="focus-item">
+          <strong>Lower-Back Soreness</strong>
+          <span>Targeted care for lower-back discomfort caused by stress, long sitting, or daily strain.</span>
+        </div>
+        <div class="focus-item">
+          <strong>Muscle Fatigue</strong>
+          <span>A soothing session to help tired muscles feel lighter, calmer, and refreshed.</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -682,9 +767,7 @@
     <div class="gallery-block">
       <h3>Gallery</h3>
       <div class="masonry" id="galleryGrid"></div>
-      <div class="gallery-empty" id="galleryEmpty">
-        Gallery photos will appear here after numbered JPG images are added to the website folder.
-      </div>
+      <div class="gallery-empty" id="galleryEmpty"></div>
     </div>
   </section>
 
@@ -703,7 +786,7 @@
       </div>
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>“The room was quiet, private, and comfortable. Great place to reset.”</p>
+        <p>“My shoulder tension felt much better after the session. Great experience.”</p>
         <span>— Guest Review</span>
       </div>
       <div class="review-card">
@@ -729,7 +812,7 @@
       </div>
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>“The room was quiet, private, and comfortable. Great place to reset.”</p>
+        <p>“My shoulder tension felt much better after the session. Great experience.”</p>
         <span>— Guest Review</span>
       </div>
       <div class="review-card">
@@ -757,7 +840,7 @@
       </div>
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>“The 90-minute session was exactly what I needed after a long week.”</p>
+        <p>“The 90-minute session helped my back feel more relaxed after a long week.”</p>
         <span>— Guest Review</span>
       </div>
       <div class="review-card">
@@ -783,7 +866,7 @@
       </div>
       <div class="review-card">
         <div class="stars">★★★★★</div>
-        <p>“The 90-minute session was exactly what I needed after a long week.”</p>
+        <p>“The 90-minute session helped my back feel more relaxed after a long week.”</p>
         <span>— Guest Review</span>
       </div>
       <div class="review-card">
@@ -894,7 +977,6 @@
     }, 4600);
 
     const galleryGrid = document.getElementById("galleryGrid");
-    const galleryEmpty = document.getElementById("galleryEmpty");
     const maxImagesToCheck = 100;
 
     function imageExists(src) {
@@ -914,11 +996,6 @@
       )
       .then((paths) => {
         const found = paths.filter(Boolean);
-
-        if (!found.length) {
-          galleryEmpty.style.display = "block";
-          return;
-        }
 
         found.forEach((src, index) => {
           const figure = document.createElement("figure");
