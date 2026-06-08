@@ -143,22 +143,31 @@
       color: #fff4e3;
     }
 
-    .btn {
+    .book-button-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .phone-link {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 15px 30px;
-      border-radius: 999px;
+      padding: 12px 18px;
+      border-radius: 6px;
       background: linear-gradient(135deg, var(--gold), #e2bc7a);
       color: #251a10;
+      font-size: 14px;
       font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.24);
+      letter-spacing: 0.04em;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
       transition: 0.25s ease;
     }
 
-    .btn:hover {
+    .phone-link:hover,
+    .anywhere-book-now-button:hover {
       transform: translateY(-3px);
     }
 
@@ -644,7 +653,19 @@
       <p>
         Professional massage care for relaxation, body tension, shoulder discomfort, back soreness, and lower-back pain.
       </p>
-      <a class="btn" href="#booking">Book Now</a>
+
+      <div class="book-button-wrap">
+        <button
+          style="background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer;"
+          id="Anywhere_button_iframe"
+          class="anywhere-book-now-button"
+          data-booking-url="https://orchid7elo.setmore.com"
+          data-new-tab="false">
+          Book now
+        </button>
+
+        <a class="phone-link" href="tel:+17197993943">Call 719-799-3943</a>
+      </div>
     </div>
   </header>
 
@@ -680,8 +701,9 @@
           <div class="kicker">Professional Pain Relief Focus</div>
           <h2>Focused care for body pain and tension</h2>
           <p>
-            Orchid Massage provides professional massage care focused on relaxation and common discomfort areas.
-            Sessions can help ease shoulder pain, back tension, lower-back soreness, and everyday muscle fatigue.
+            Orchid Massage provides professional massage care from training-school background,
+            focused on relaxation and common discomfort areas. Sessions can help ease shoulder pain,
+            back tension, lower-back soreness, and everyday muscle fatigue.
           </p>
         </div>
       </div>
@@ -919,10 +941,21 @@
   <section class="booking" id="booking">
     <h2>Ready to Book?</h2>
     <p>
-      Call Orchid Massage to schedule your session.
+      Use online booking or call Orchid Massage to schedule your session.
       Hot Stone is free, and Cupping is available for $20.
     </p>
-    <a class="btn" href="tel:+17197993943">Call 719-799-3943</a>
+
+    <div class="book-button-wrap">
+      <button
+        style="background-color: #000; color: #fff; border: none; padding: 12px 18px; font-size: 14px; font-weight: 600; border-radius: 6px; cursor: pointer;"
+        class="anywhere-book-now-button"
+        data-booking-url="https://orchid7elo.setmore.com"
+        data-new-tab="false">
+        Book now
+      </button>
+
+      <a class="phone-link" href="tel:+17197993943">Call 719-799-3943</a>
+    </div>
   </section>
 
   <section id="contact">
@@ -1011,6 +1044,12 @@
       });
 
     document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <script
+    id="anywhere_book_now_script"
+    type="text/javascript"
+    src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js">
   </script>
 
 </body>
